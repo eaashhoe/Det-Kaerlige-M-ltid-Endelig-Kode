@@ -1,0 +1,636 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: playfair-display, serif;
+    font-weight: 400;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --------------------- generel css --------------------- */
+p {
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2.5;
+}
+
+
+.blackTransparentBackground {
+    color: white;
+    background-color:rgb(0, 0, 0, 0.8);
+    line-height:1.6;
+    box-shadow: 10px 0 0px 0px rgb(0, 0, 0, 0.8), -10px 0 0px 0px rgb(0, 0, 0, 0.8);
+}
+
+.blackBackground {
+    color: white;
+    text-align: left;
+    font-size: 50px;
+    background-color:black;
+    line-height:1.6;
+    box-shadow: 10px 0 0px 0px black, -10px 0 0px 0px black;
+}
+
+.whiteBackground {
+    font-size: 80px;
+    font-weight: 400;
+    background-color:rgba(255, 255, 255);
+    line-height:1.7;
+    box-shadow: 10px 0 0px 0px rgba(255, 255, 255), -10px 0 0px 0px rgba(255, 255, 255)
+}
+
+video {
+    pointer-events: none;
+}
+/* --------------------- process bar --------------------- */
+.progress-container {
+    width: 100%;
+    height: 8px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #E4032E;
+    width: 0%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+/* --------------------- Hero Section --------------------- */
+.hero-section{
+    position: relative;
+    text-align: center;
+    height: 800px;
+}
+
+.hero-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-section video {
+      width: 100%;
+}
+
+/*Scroll down button*/ 
+
+.scroll-down {
+    opacity: 1;
+    -webkit-transition: all .5s ease-in 3s;
+    transition: all .5s ease-in 3s;
+  }
+  
+  .scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -16px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: 14px auto;
+    border-radius: 50%;
+    z-index: 2;
+    -webkit-animation: bounce 2s infinite 2s;
+    animation: bounce 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+  }
+  
+  .scroll-down:before {
+      position: absolute;
+      top: calc(50% - 8px);
+      left: calc(50% - 6px);
+      transform: rotate(-45deg);
+      display: block;
+      width: 12px;
+      height: 12px;
+      content: "";
+      border: 2px solid white;
+      border-width: 0px 0 2px 2px;
+  }
+
+  
+  @keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+    60% {
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+  }
+
+
+/* --------------------- Parallax Effekt Nr 1 --------------------- */
+.parallaxOne {
+    background-image: url("img/SimoneTaetPaa.jpg");
+    height: 2000px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#parallaxOneTextOne{
+    position: absolute;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    width: 34%;
+    left:57%;
+}
+
+#parallaxOneTextTwo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 34%;
+    text-align: center;
+}
+
+#parallaxOneTextThree{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    text-align: center;
+}
+
+/* --------------------- Simone Info --------------------- */
+.SimoneInfo {
+    padding: 10% 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logoVideo {
+    padding: 100px 0px;
+    width: 75%;
+
+}
+
+/* --------------------- Parallax Effekt Nr 2 --------------------- */
+.parallaxTwo {
+    background-image: url("img/simoneBrev-i-taske.jpg");
+    height: 1000px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#parallaxTwoTextOne{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    text-align: left;
+}
+
+/* --------------------- Parallax Effekt Nr 3 --------------------- */
+.parallaxThree {
+    background-image: url("img/SimoneLaverMad.jpeg");
+    height: 1000px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallaxThreeTextOne{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: left;
+}
+
+/* --------------------- Simone Info nr 3 --------------------- */
+
+#SimoneQuote {
+    padding: 200px 0px;
+}
+
+/* --------------------- Simone Video Brief --------------------- */
+
+#simoneVideo {
+    width: 100%;
+}
+
+/* --------------------- Postkort --------------------- */
+#fortællingpostkost {
+    width: 60%;
+    position: relative;
+    left: 22%;
+    margin-bottom: 50px;
+}
+
+.postkort {
+    position: relative;
+    transform: rotate(10deg);
+}
+
+.typewriter-section {
+    margin: -10px 480px -20px 600px; 
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#typedtext {
+    font-family: adobe-handwriting-frank, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:20px; 
+    letter-spacing: 6px;
+}
+
+/* ---------------------  Fuld billede af Simone ---------------------  */
+
+#FullPic {
+    width: 100%;
+}
+
+/* ---------------------  Madrejsen ---------------------  */
+
+.widthVideo {
+    width: 40px;
+}
+
+.sortOverskrift {
+    text-align: center;
+    padding-top: 100px;
+}
+
+#horizontal-scroll {
+    overflow-x: hidden;
+    display: flex;
+}
+  
+.scroll-video {
+    min-width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+#info-1 {
+  position:relative;
+  height: 20px;
+  left: -630px;
+  bottom: 20px;
+}
+  
+#info-2 {
+  position:relative;
+  height: 20px;
+  left: -500px;
+  bottom: 320px;
+}
+  
+#info-3 {
+  position:relative;
+  height: 20px;
+  left: -730px;
+  bottom:-230px;
+}
+  
+#info-4 {
+  position:relative;
+  height: 20px;
+  left: -550px;
+  bottom: 240px;
+}
+  
+#info-5 {
+  position:relative;
+  height: 20px;
+  left: -700px;
+  bottom: 40px;
+}
+  
+.info:hover:after {
+  position: absolute;
+  content: attr(aria-label);
+  display: inline-block;
+  width: 200px;
+  font-size: 13pt;
+  left: 30px;
+  top: 30px;
+  padding: 20px 30px 20px 30px;
+  background-color: white;
+  opacity: 80%;
+}
+
+.videre {
+    position: relative;
+    bottom: -720px;
+    right: 700px;
+}
+
+.videre a{
+    color: black;
+}
+
+/* --------------------- 5 GODE GRUNDE TIL AT BLIVE FRIVILLIG ---------------- */
+
+.hjerteWidth {
+    width: 250px;
+}
+
+/*centrering af hele sektion*/
+.femHjerter {
+    display: flex;
+    padding: 200px 0px 50px 0px;
+    justify-content: center;
+    width: 100%;
+}
+
+/*skjuler rødt hjerte før hover*/
+.hjerte .back-img {
+display: none;
+    
+}
+/*viser kun det hvide hjerte*/
+.hjerte .top-img {
+    display: block;
+}
+
+/*viser det røde hjerte mens hover*/
+.hjerte:hover .back-img {
+    display: block;
+}
+
+/*skjuler hvidt hjerte mens hover*/
+.hjerte:hover .top-img {
+    display: none;
+}
+
+/*Tekstbokst med grunde til at blive frivillig*/
+.hjerte p {
+    display: none;
+    box-shadow: 10px 0 0px 0px black, -10px 0 0px 0px black;
+
+}
+
+/*tekstboks kommer frem når man hover over hjerte*/
+.hjerte:hover p {
+    display: block;
+    position: absolute;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    background-color:black;
+    line-height:1.6;
+    box-shadow: 10px 0 0px 0px black, -10px 0 0px 0px black;
+    transition:all 0.3s ease;
+}
+
+/*specifikke placeringer af de enkelte tekstbokse med grunde til at blive frivillig*/
+.margin-top {
+    margin-top: 50px;
+}
+
+.margin-bottom {
+     margin-top: -75px;
+}
+
+.hjerte-tekst-1 {
+    margin-left: -50px;
+}
+
+.hjerte-tekst-2 {
+    margin-left: -70px;
+}
+
+.hjerte-tekst-3 {
+  margin-left: -65px;
+}
+
+.hjerte-tekst-4 {
+    margin-left: -95px;
+}
+
+
+/* --------------------- Parallax Effekt Nr 4 --------------------- */
+.parallaxFour {
+    background-image: url("img/faellesbillede.jpg");
+    height: 1000px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#parallaxFourTextOne{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: left;
+}
+
+/* ---------------------- Parallax nr 5 --------------------- */
+
+.parallaxFive {
+    background-image: url("img/simone-skriver-kort.jpg");
+    height: 800px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+/* ---------------------  Testimonial section ---------------------  */
+
+.testimonial-section{
+    padding: 80px 0px 150px 0px;
+    text-align: center;
+}
+
+.testimonial-pics{
+    padding: 150px 0px 40px 0px;
+}
+
+.testimonial-pics img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 20px;
+    filter: grayscale(100%);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.testimonial-pics img:hover, .testimonial-pics img.active{
+    filter: none;
+    width: 100px;
+    height: 100px;
+}
+
+.testimonial-contents{
+    max-width: 600px;
+    margin: auto;
+}
+
+.testimonial{
+    display: none;
+}
+
+.testimonial.active{
+    display: block;
+}
+
+.description{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 15px;
+    padding-top: 40px;
+}
+
+blockquote {
+    margin-bottom:-30px;
+    position: relative; 
+    margin: 0 auto; 
+    padding-left: 0.4em;
+}
+
+blockquote p:before { 
+    content: open-quote;
+    
+    font-weight: bold;
+    font-size:50px;
+    color:black;
+
+    position: absolute; 
+    top: -0.2em;
+    left: -1.5em; 
+} 
+
+blockquote p:after { 
+    content: close-quote;
+    
+    font-weight: bold;
+    font-size:50px;
+    color:black;
+
+    margin-top: 20px;
+    position: absolute; 
+    bottom: -0.5em;
+    right: -1.2em;
+}
+
+/* ---------------------  End section ---------------------  */
+
+.end-heading {
+    position: absolute;
+    top: 28%;
+    padding: 3%;
+    left: 74%;
+    transform: translate(-50%, -50%);
+  }
+
+#frivilligButton {
+    position: absolute;
+    top: 55%;
+    left: 74%;
+    transform: translate(-50%, -50%);
+    background-color: #E4032E;
+    font-size: 20px;
+    font-family: playfair-display, serif;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 12px 40px;
+    border-radius: 30px;
+    border: none;  
+}
+
+#frivilligButton:hover {
+    background-color: #90001a;
+}
+
+
+
+/* --------------------- CSS animation på Scroll ---------------------  */
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+  
+.reveal.active {
+    opacity: 1;
+}
+.active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+    animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+    animation: fade-right 1s ease-in;
+}
+
+@keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+@keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+  
+@keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
